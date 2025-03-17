@@ -93,13 +93,26 @@ const Show = ({ auth, post }: ShowProps) => {
                                                 : "text-gray-500 hover:text-red-700"
                                         }`}
                                     >
-                                        <Heart className="w-6 h-6" />
-                                        fill=
-                                        {post.is_liked
-                                            ? "currentColor"
-                                            : "none"}
+                                        <Heart
+                                            className="w-6 h-6"
+                                            fill={
+                                                post.is_liked
+                                                    ? "currentColor"
+                                                    : "none"
+                                            }
+                                        />
                                     </button>
+
+                                    <span className="text-gray-600">
+                                        {post.likes_count}
+                                    </span>
                                 </div>
+                            </div>
+
+                            <div className="prose max-w-none">
+                                <p className="text-gray-700">
+                                    {post.description}
+                                </p>
                             </div>
                         </div>
                     </div>
